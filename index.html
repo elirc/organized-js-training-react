@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jeopardy MVP</title>
+<link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+<h1>Jeopardy Game</h1>
+
+<script src="scripts/data.js"></script>
+<script src="scripts/board.js"></script>
+<script src="scripts/editor.js"></script>
+<script src="scripts/main.js"></script>
+
+<div id="categories"></div>
+<div id="board" class="board"></div>
+
+
+<button id="edit-btn">Edit Questions</button>
+
+
+<!-- Modal for showing answers -->
+<div id="answer-modal" class="modal hidden">
+<div class="modal-content">
+<p id="answer-text"></p>
+<button id="close-answer">Close</button>
+</div>
+</div>
+
+
+<!-- Modal for editing questions -->
+<div id="editor-modal" class="modal hidden">
+<div class="modal-content">
+<h2>Edit Questions</h2>
+<div id="editor-container"></div>
+<button id="save-questions">Save Changes</button>
+<button id="close-editor">Cancel</button>
+</div>
+</div>
+
+
+<script src="scripts/data.js"></script>
+<script src="scripts/board.js"></script>
+<script src="scripts/editor.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>
