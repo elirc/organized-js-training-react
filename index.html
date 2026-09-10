@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jeopardy MVP</title>
-<link rel="stylesheet" href="styles/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stack Ladder — noob to mid-level CRUD dev</title>
+  <meta name="description" content="Interactive interview upskilling for the JavaScript, TypeScript, React, Node, C# and .NET stack." />
+  <link rel="stylesheet" href="styles/app.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#129497;</text></svg>" />
 </head>
 <body>
-<h1>Jeopardy Game</h1>
+  <div id="app" class="app-shell">
+    <div class="boot">Loading…</div>
+  </div>
 
-<script src="scripts/data.js"></script>
-<script src="scripts/board.js"></script>
-<script src="scripts/editor.js"></script>
-<script src="scripts/main.js"></script>
-
-<div id="categories"></div>
-<div id="board" class="board"></div>
-
-
-<button id="edit-btn">Edit Questions</button>
-
-
-<!-- Modal for showing answers -->
-<div id="answer-modal" class="modal hidden">
-<div class="modal-content">
-<p id="answer-text"></p>
-<button id="close-answer">Close</button>
-</div>
-</div>
-
-
-<!-- Modal for editing questions -->
-<div id="editor-modal" class="modal hidden">
-<div class="modal-content">
-<h2>Edit Questions</h2>
-<div id="editor-container"></div>
-<button id="save-questions">Save Changes</button>
-<button id="close-editor">Cancel</button>
-</div>
-</div>
-
-
-<script src="scripts/data.js"></script>
-<script src="scripts/board.js"></script>
-<script src="scripts/editor.js"></script>
-<script src="scripts/main.js"></script>
+  <!-- Classic script: runs even when ES modules are blocked, so we can explain why. -->
+  <script>
+    if (location.protocol === 'file:') {
+      document.getElementById('app').innerHTML =
+        '<div class="boot-error">' +
+        '<h1>Almost there — this app needs a local server</h1>' +
+        '<p>You opened this file directly from disk (<code>file://</code>). Browsers refuse to load ' +
+        'ES modules over <code>file://</code> for security reasons, so the app cannot start.</p>' +
+        '<p>Open a terminal in this folder and run either of these:</p>' +
+        '<pre>npm start</pre><pre>npx --yes serve .</pre>' +
+        '<p>Then visit the <code>http://localhost:…</code> address it prints. ' +
+        'In VS Code you can also right-click <code>index.html</code> &rarr; <em>Open with Live Server</em>.</p>' +
+        '<p class="boot-note">Congratulations, that is your first real interview answer: ' +
+        '<strong>“why does my app work on a server but not from the file system?”</strong> — ' +
+        'the same-origin policy treats every <code>file://</code> document as an opaque origin.</p>' +
+        '</div>';
+    }
+  </script>
+  <script type="module" src="src/main.js"></script>
 </body>
 </html>

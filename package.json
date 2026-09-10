@@ -1,0 +1,25 @@
+{
+  "name": "stack-ladder",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Interactive interview upskilling for the JavaScript, TypeScript, React, Node, C# and .NET stack.",
+  "scripts": {
+    "start": "npx --yes serve . -l 5173",
+    "dev": "npx --yes serve . -l 5173",
+    "test": "node scripts/validate-content.mjs && node scripts/smoke.mjs",
+    "test:content": "node scripts/validate-content.mjs",
+    "test:smoke": "node scripts/smoke.mjs"
+  },
+  "keywords": [
+    "interview-prep",
+    "javascript",
+    "typescript",
+    "react",
+    "node",
+    "csharp",
+    "dotnet",
+    "sql"
+  ],
+  "license": "MIT"
+}
